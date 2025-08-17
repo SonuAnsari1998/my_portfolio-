@@ -2,30 +2,19 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url('https://img.freepik.com/premium-photo/dark-spherical-elements-suitable-wallpaper-background-screensaver_183270-1496.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 #animation{
     font-family: sans-serif; 
     font-size: 40px;
-    overflow: hidden;
-    border-right: 2px solid rgba(0, 0, 0, 0.5);
     width: 0;
     white-space: nowrap;
-    animation-name: typing, blink;
-    animation-duration: 3s;
-    animation-iteration-count:infinite;
-    animation-timing-function: steps(20, end);  /*count the number of letters*/
-}
-
-@keyframes typing{
-    from{width: 0;}
-
-    to{width:22ch}
-}
-
-@keyframes blink {
-    50%{
-         border-right: 2px solid black;
-    }
 }
 
 /* Header start */
@@ -36,20 +25,32 @@ header {
     box-shadow: 0px 0px 5px;
     padding: 20px;
     border-radius: 5px;
+    
 }
 
 #header_name {
     font-size: 30px;
-    color: blue;
+    color: white;
     font-weight: bold;
     font-family: sans-serif;
 }
 
 #header_tag a {
     font-family: sans-serif;
-    color: rgb(0, 0, 0);
+    color: white;
     font-weight: bold;
     text-decoration: none;
+     transition: 0.5s;
+}
+#header_tag a:hover{
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(72, 100, 24);
+    box-shadow: 1px 1px 60px rgba(7, 245, 245, 0.305);
+    border-radius: 10px;
+    padding: 8px;
+    color: rgb(217, 213, 187);
 }
 
 #header_tag {
@@ -57,14 +58,17 @@ header {
     align-items: center;
     justify-content: space-between;
     column-gap: 30px;
+    color: rgb(255, 255, 255);
 }
 
 h2 {
     font-family: sans-serif;
+    color: white;
 }
 
 p {
     font-family: sans-serif;
+    color: white;
 }
 
 #main-content {
@@ -76,16 +80,21 @@ p {
     padding: 80px;
 }
 
-#circle {
+#circle{
     width: 300px;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 6px solid rgb(23, 23, 176);
-    border-radius: 50%;
-
+    box-shadow: 0px 0px 30px rgb(0, 255, 238);
+    border-radius: 50% 10% 50%  10%;
+    transition: 0.8s;
 }
+#circle:hover{
+    cursor: pointer;
+    padding: 8px;
+}
+
 
 #box1 {
     width: 50%;
@@ -95,17 +104,25 @@ p {
     width: 50%;
 }
 
-button {
-    background-color: rgb(23, 23, 176);
+#btn {
+    background-color: rgba(60, 60, 147, 0.789);
     padding: 8px;
-    border-radius: 20px;
+    border-radius: 15px;
     color: white;
     border: none;
-    width: 200px;
+    width: 250px;
     font-weight: bold;
     display: flex;
+    font-size: 25px;
     justify-content: space-evenly;
     align-items: center;
+    transition: 0.5s;
+
+}
+#btn:hover{
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 20px rgb(141, 70, 208);
 
 }
 
@@ -119,6 +136,7 @@ footer {
     box-shadow: 0px 0px 5px;
     padding: 15px;
     font-family: sans-serif;
+    color: white;
 
 }
 
@@ -131,13 +149,19 @@ footer {
     justify-content: center;
 }
 
-#about-content {
+#about-content{
     width: 70%;
     height: 310px;
-    background-color: rgba(128, 128, 128, 0.105);
     display: flex;
     padding: 12px;
     border-radius: 12px;
+    background-color: rgba(127, 96, 55, 0.275);
+    transition: 0.3s;
+}
+#about-content:hover{
+    padding: 30px;
+    box-shadow: 1px 1px 30px rgb(7, 245, 245);
+   
 }
 
 #about-content h2 {
@@ -150,11 +174,14 @@ footer {
 #about-content p {
     font-family: sans-serif;
     padding: 10px;
+    color: rgba(255, 255, 255, 0.821);
 }
 
 #Education-Experience-parent {
-    background-color: rgba(128, 128, 128, 0.173);
+    background-color: rgba(54, 46, 46, 0.852);
     border-radius: 10px;
+    
+    
 }
 
 #Education-Experience-child {
@@ -165,11 +192,17 @@ footer {
 
 #Education-Experience-sub-child {
     padding: 15px;
-    background-color: white;
     color: black;
     font-size: 30px;
     width: 400px;
     border-radius: 10px;
+    background-color: rgba(127, 96, 55, 0.275);
+    color: rgba(255, 255, 255, 0.821);
+    transition: 0.4s;
+}
+#Education-Experience-sub-child:hover{
+    padding: 20px;
+    box-shadow: 1px 1px 20px rgb(7, 245, 245);
 }
 
 #Education_parent {
@@ -178,28 +211,23 @@ footer {
     justify-content: center;
     column-gap: 20px;
     height: 143px;
-
 }
 
-#Education_parent1 {
-    background-color: white;
+#Education_parent1{
+    background-color: rgba(127, 96, 55, 0.275);
     height: 20%;
     width: 30%;
     height: 100px;
     border-radius: 10px;
     align-items: center;
     text-align: center;
+    transition: 0.3s;
+    
 }
-
-#Education_parent1 {
-    background-color: white;
-    height: 20%;
-    width: 30%;
-    border-radius: 10px;
-    height: 100px;
-    align-items: center;
-    text-align: center;
-
+#Education_parent1:hover{
+    padding: 10px;
+    box-shadow: 1px 1px 30px rgb(7, 245, 245);
+    
 }
 
 /* About end */
@@ -213,18 +241,20 @@ footer {
      padding-bottom: 20px;
 }
 #Front-End-child{
-    background-color: rgba(43, 113, 113, 0.049);
-     border: 1px solid rgba(0, 0, 0, 0.148); 
+    background-color: rgba(143, 197, 197, 0.455);
      border-radius: 10px;
      padding: 10px; 
      height: 140px; 
      width: 190px; 
      text-align: center;
+     transition: 0.5s;
      
 }
 #Front-End-child:hover{
     background-color: rgba(128, 128, 128, 0.445);
     cursor: pointer;
+    padding: 18px;
+    box-shadow: 1px 1px 45px rgb(0, 238, 255);
 }
 #tools-parent{
      display: flex; 
@@ -241,15 +271,17 @@ footer {
     justify-content: center;
     height: 45px;
     width: 130px;
-    border-radius: 20px;
-    background-color: rgb(54, 54, 166);
+    border-radius: 10px;
+    background-color: rgba(143, 197, 197, 0.455);
     color: white;
     font-family: sans-serif;
+    transition: 0.5s;
 }
 #tools-child:hover{
-    background-color: rgb(34, 212, 34);
     font-weight: bold;
     cursor: pointer;
+    padding: 5px;
+    box-shadow: 1px 1px 15px rgb(0, 238, 255);
 }
 
 /* Project start */
@@ -265,11 +297,16 @@ footer {
      align-items: center; 
      justify-content: center; 
      text-align: center; 
-     border: 1px solid rgba(0, 0, 0, 0.166); 
      height: 285px; 
      width: 400px;
      border-radius: 15px; 
-     background-color: rgba(128, 128, 128, 0.078);
+     background-color: rgba(218, 206, 206, 0.605);
+     transition: 0.5s;
+}
+#project_child:hover{
+    padding: 1px;
+    box-shadow: 1px 1px 50px rgba(7, 245, 245, 0.689);
+    cursor: pointer;
 }
 .recent_project{
      display: flex; 
@@ -279,7 +316,7 @@ footer {
      font-size: 30px;
 }
 #child{
-     background-color: rgba(0, 255, 255, 0.141); 
+     background-color: rgba(33, 105, 78, 0.868); 
      height: 155px; 
      padding: 10px; 
      text-align: start; 
@@ -293,7 +330,7 @@ footer {
 #project_view{
     text-decoration: none;
     font-size: 20px;
-    color: blue;
+    color: rgb(26, 26, 126);
 }
 #next_icon{
      display: flex; 
@@ -322,6 +359,13 @@ footer {
      border-radius: 7px; 
      padding: 22px; 
      text-align: center;
+     transition: 0.8s;
+}
+#opportunities_child:hover{
+    padding: 27px;
+    background-color: rgba(54, 28, 78, 0.597);
+    /* box-shadow: 1px 1px 50px rgba(7, 245, 245, 0.689); */
+    box-shadow: 1px 1px 50px rgba(169, 125, 211, 0.597);
 }
 #opportunities_parent{
      display: flex; 
@@ -329,3 +373,114 @@ footer {
      center; column-gap: 20px;
 }
 /* Project end*/
+ #contact{
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 84vh;
+
+    }
+
+    .contact-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 450px;
+      animation: fadeIn 1.2s ease;
+      transition: 0.5s;
+    }
+    .contact-container:hover{
+        padding: 20px;
+        box-shadow: 1px 1px 60px rgb(50, 163, 112);
+    }
+
+    .contact-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 28px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #444;
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: rgb(12, 33, 224);
+      box-shadow: 0 0 8px rgba(102,126,234,0.6);
+    }
+
+    button {
+      width: 100%;
+      background: #667eea;
+      color: #fff;
+      font-size: 18px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #764ba2;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #667eea;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .social-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #764ba2;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #764ba2;
+    }
+
+    .social-links a:hover::after {
+      width: 100%;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+/* Contact Start */
